@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CampusView</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<link href="/menu_source/styles.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type='text/javascript' src='/menu_source/menu_jquery.js'></script>
+
+</head>
+<body>
+	 
+      
+<div id='cssmenu'>
+
+<ul>
+  <li> <%= image_tag('CampusView.png') %> </li>
+   <li class='active'><%= link_to "Home", root_path %></li>
+   <li><%= link_to "About", pages_about_path %></li>
+   <li class='has-sub'><a href='#'><span>Floorplans</span></a>
+      <ul>
+         <li><a href='#'><span>efficiency</span></a></li>
+         <li><a href='#'><span>1 bedroom</span></a></li>
+         <li class='last'><a href='#'><span>2 bedroom</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><%= link_to "Location", pages_location_path %>
+   </li>
+   <li class='last'><%= link_to "Contact", pages_contact_path %> </li>
+</ul>
+</div>
+     
+
+<%= yield %>
+
+</body>
+</html>
