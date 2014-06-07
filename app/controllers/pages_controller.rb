@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def location
+  	@address = "1400 Union Avenue (State Highway 297 north of Fir Avenue) Fergus Falls, MN"
   end
 
   def contact
