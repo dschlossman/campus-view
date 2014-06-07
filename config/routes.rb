@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/about'
   get 'pages/location'
-  get 'pages/contact'
+  get '/contact' => 'contact_us/contacts#new' 
   root 'pages#index'
 
 
